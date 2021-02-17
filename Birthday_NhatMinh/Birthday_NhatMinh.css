@@ -1,0 +1,137 @@
+body{
+    margin: auto 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 80vh 5fr 0.5fr;
+}
+/* NAVIGATION BAR */
+.nav-bar{
+    background: linear-gradient(to right, #bdc3c7 , #2c3e50);
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list > li{
+    font-size: 20px;
+    padding: 20px;
+    justify-self: center;
+    align-self: center;
+    text-transform: uppercase;
+}
+.push{
+    margin-left: auto;
+}
+li{
+    color: whitesmoke;
+}
+li > a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+li > a > img{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    right: 20px;
+}
+/* BIG PICTURE INSIDE */
+.body{
+    display: flex;
+    /* background: linear-gradient(to right, #ddd6f3 , #faaca8); */
+    justify-content: center;
+    align-items: center;
+}
+.body > img{
+    width: 60%;
+    height: 100%;
+    transition: all 1s;
+}
+.body > img:hover{
+    transform: translate(100px,0);
+}
+/* CONTENT */
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    background: linear-gradient(to right ,#a1c4fd , #c2e9fb);
+    justify-items: center;
+    align-items: center;
+}
+.content > img{
+    width: 400px;
+    height: 500px;
+    padding: 10px 0px;
+}
+.footer{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    line-height: 50px;
+    background: linear-gradient(to right, #feada6 , #f5efef);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.position{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 30px;
+}
+.position > a{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+}
+.fa-heart{
+    color: red;
+}
+.fa-heart-2{
+    color: black;
+}
+/* MEDIA */
+@media only screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.05fr 80vh 5fr 0.3fr;
+    }
+    .nav-list > li{
+        font-size: 10px;
+        padding: 10px;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+    .body > img{
+        width: 80%;
+        height: 50%;
+        transition: all 1s;
+    }
+    li > a > img{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        right: 20px;
+    }
+    .content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        background: linear-gradient(to right ,#a1c4fd , #c2e9fb);
+        justify-items: center;
+        align-items: center;
+    }
+    .content > img{
+        width: 300px;
+        height: 450px;
+        padding: 10px 0px;
+    }
+}
